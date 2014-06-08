@@ -23,6 +23,7 @@ library
    System.DevUtils.Base.Misc
    System.DevUtils.Base.Control.Monad
    System.DevUtils.Base.Data.List
-  build-depends:       base ==4.7.*, HUnit ==1.2.5.*
+   System.DevUtils.Base.Data.Map
+  build-depends:       base ==4.7.*, HUnit ==1.2.5.*, containers ==0.5.5.1
   GHC-Options:         -Wall -rtsopts
   hs-source-dirs:      src
