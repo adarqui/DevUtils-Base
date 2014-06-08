@@ -4,7 +4,6 @@ module System.DevUtils.Base.Url.Ssh (
  defaultSsh
 ) where
 
-import qualified System.DevUtils.Base.Url.Auth as A
 import qualified System.DevUtils.Base.Url.Connection as C
 import qualified System.DevUtils.Base.Url.Session as Ses
 
