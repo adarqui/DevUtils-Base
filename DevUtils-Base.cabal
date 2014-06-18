@@ -17,6 +17,7 @@ library
    System.DevUtils.Base.Url.Field
    System.DevUtils.Base.Url.File
    System.DevUtils.Base.Url.Redis
+   System.DevUtils.Base.Url.MySQL
    System.DevUtils.Base.Url.Session
    System.DevUtils.Base.Url.Ssh
    System.DevUtils.Base.Url.ZMQ
