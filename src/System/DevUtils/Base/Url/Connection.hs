@@ -4,11 +4,13 @@ module System.DevUtils.Base.Url.Connection (
  defaultConnection
 ) where
 
+import Data.Word
+
 data ConnectionType = TCP | UDP | INET | UNIX | UNKNOWN deriving (Show, Read)
 
 data Connection = Connection {
  _dest :: String,
- _port :: Integer,
+ _port :: Word16,
  _type :: ConnectionType
 } deriving (Show, Read)
 
