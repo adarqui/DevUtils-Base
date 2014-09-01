@@ -28,11 +28,13 @@ instance FromJSON Region where
 
 
 data Rate =
- PerGB
+ PerGB | PerHr
  deriving (Show, Read, Eq)
 
 instance FromJSON Rate where
  parseJSON (String "perGB") = pure PerGB
+ parseJSON (String "perhr") = pure PerHr
+ parseJSON _ = mzero
 
 
 data CurrencyObject = CurrencyObject {

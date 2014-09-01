@@ -1,0 +1,2439 @@
+{
+    "vers": 0.01,
+    "config": {
+        "valueColumns": [
+            "yrTerm1",
+            "yrTerm3",
+            "usageRate"
+        ],
+        "currencies": [
+            "USD"
+        ],
+        "regions": [
+            {
+                "region": "us-east",
+                "instanceTypes": [
+                    {
+                        "type": "stdDeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "227.50"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "350"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.046"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "910"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "1,400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.184"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.368"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,325"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.262"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.524"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.048"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multiAZdeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "455"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "700"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.092"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.368"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3,640"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.736"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.524"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.048"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "10,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "16,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "2.096"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "us-west-2",
+                "instanceTypes": [
+                    {
+                        "type": "stdDeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "227.50"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "350"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.046"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "910"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "1,400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.184"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.368"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,325"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.262"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.524"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.048"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multiAZdeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "455"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "700"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.092"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.368"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3,640"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.736"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.524"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.048"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "10,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "16,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "2.096"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "us-west",
+                "instanceTypes": [
+                    {
+                        "type": "stdDeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "227.50"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "350"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.059"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "910"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "1,400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.235"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.471"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,325"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.352"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.408"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multiAZdeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "455"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "700"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.118"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.471"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3,640"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.942"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.408"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "10,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "16,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "2.816"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "eu-ireland",
+                "instanceTypes": [
+                    {
+                        "type": "stdDeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "227.50"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "350"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.059"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "910"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "1,400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.235"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.471"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,325"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.352"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.408"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multiAZdeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "455"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "700"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.118"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.471"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3,640"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.942"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.408"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "10,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "16,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "2.816"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "apac-sin",
+                "instanceTypes": [
+                    {
+                        "type": "stdDeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "227.50"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "350"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.059"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "910"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "1,400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.235"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.471"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,325"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.352"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.408"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multiAZdeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "455"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "700"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.118"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.471"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3,640"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.942"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.408"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "10,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "16,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "2.816"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "apac-tokyo",
+                "instanceTypes": [
+                    {
+                        "type": "stdDeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "239"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "368"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.062"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "956"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "1,470"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.247"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,911"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,940"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.495"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,391"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,100"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.370"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,783"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,200"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.739"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,565"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.478"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multiAZdeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "478"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "736"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.124"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,912"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,940"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.494"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3,822"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5,880"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.990"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,782"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,200"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.740"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,566"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.478"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "11,130"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "16,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "2.956"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "apac-syd",
+                "instanceTypes": [
+                    {
+                        "type": "stdDeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "227.50"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "350"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.059"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "910"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "1,400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.235"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.471"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,325"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.352"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.408"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multiAZdeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "455"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "700"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.118"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1,820"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.471"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3,640"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.942"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2,650"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "4,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "5,300"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "8,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.408"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "10,600"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "16,000"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "2.816"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "sa-east-1",
+                "instanceTypes": [
+                    {
+                        "type": "stdDeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "307.13"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "473"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.077"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1229"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "1890"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.307"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2457"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "3780"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.614"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "1789"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "2,700"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.447"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3578"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.895"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "7155"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "10800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.790"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "multiAZdeployRes",
+                        "tiers": [
+                            {
+                                "size": "sm",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "614"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "945"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.153"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "lg",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "2457"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "3780"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.614"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xl",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "4914"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "7560"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.227"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "3578"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "5400"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "0.895"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "7155"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "10800"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "1.790"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "xxxxlHiMem",
+                                "valueColumns": [
+                                    {
+                                        "name": "yrTerm1",
+                                        "prices": {
+                                            "USD": "14310"
+                                        }
+                                    },
+                                    {
+                                        "name": "yrTerm3",
+                                        "prices": {
+                                            "USD": "21600"
+                                        }
+                                    },
+                                    {
+                                        "name": "usageRate",
+                                        "prices": {
+                                            "USD": "3.580"
+                                        },
+                                        "rate": "perhr"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
