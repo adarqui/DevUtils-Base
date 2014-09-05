@@ -18,3 +18,16 @@ pricing/ec2/linux-ri-heavy.js
 pricing/ec2/linux-ri-light.js
 pricing/ec2/linux-ri-medium.js
 
+
+http://aws-assets-pricing-prod.s3.amazonaws.com/pricing/dedicated-instances/di-linux-od.js
+
+
+http://a0.awsstatic.com/pricing/1/elasticache/pricing-standard-deployments-elasticache.min.js
+http://a0.awsstatic.com/pricing/1/elasticache/previous-generation/pricing-standard-deployments-elasticache.min.js
+
+
+http://a0.awsstatic.com/pricing/1/elasticache/previous-generation/pricing-elasticache-light-standard-deployments.min.js
+http://a0.awsstatic.com/pricing/1/elasticache/previous-generation/pricing-elasticache-medium-standard-deployments.min.js
+http://a0.awsstatic.com/pricing/1/elasticache/previous-generation/pricing-elasticache-heavy-standard-deployments.min.js
+
+

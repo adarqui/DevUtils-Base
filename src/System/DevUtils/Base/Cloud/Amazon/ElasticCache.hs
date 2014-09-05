@@ -1,12 +1,12 @@
 {-# LANGUAGE OverloadedStrings #-}
-module System.DevUtils.Base.Cloud.Amazon.EC2 (
- EC2 (..),
- EC2Root (..),
- EC2Config (..),
- EC2Region (..),
- EC2InstanceType (..),
- EC2Size (..),
- EC2ValueColumns (..)
+module System.DevUtils.Base.Cloud.Amazon.ElasticCache (
+ EC (..),
+ ECRoot (..),
+ ECConfig (..),
+ ECRegion (..),
+ ECInstanceType (..),
+ ECSize (..),
+ ECValueColumns (..)
 ) where
 
 import System.DevUtils.Base.Cloud.Amazon.Misc
@@ -16,31 +16,31 @@ import Data.Aeson
 import Control.Applicative
 import Control.Monad
 
-data EC2 = EC2 {
+data EC = EC {
 }
 
 
-data EC2Root = EC2Root {
+data ECRoot = ECRoot {
  vers :: Version,
- config :: EC2Config
+ config :: ECConfig
 } deriving (Show, Read, Eq)
 
-instance FromJSON EC2Root where
- parseJSON (Object v) = EC2Root <$>
+instance FromJSON ECRoot where
+ parseJSON (Object v) = ECRoot <$>
   v .: "vers" <*>
   v .: "config"
  parseJSON _ = mzero
 
 
-data EC2Config = EC2Config {
+data ECConfig = ECConfig {
  currencies :: [Currency],
  rate :: Rate,
  valueColumnsC :: [String],
- regions :: [EC2Region]
+ regions :: [ECRegion]
 } deriving (Show, Read, Eq)
 
-instance FromJSON EC2Config where
- parseJSON (Object v) = EC2Config <$>
+instance FromJSON ECConfig where
+ parseJSON (Object v) = ECConfig <$>
   v .: "currencies" <*>
   v .: "rate" <*>
   v .: "valueColumns" <*>
@@ -48,41 +48,41 @@ instance FromJSON EC2Config where
  parseJSON _ = mzero
 
 
-data EC2Region = EC2Region {
- region :: String,
- instanceType :: [EC2InstanceType]
+data ECRegion = ECRegion {
+ region :: Region,
+ instanceType :: [ECInstanceType]
 } deriving (Show, Read, Eq)
 
-instance FromJSON EC2Region where
- parseJSON (Object v) = EC2Region <$>
+instance FromJSON ECRegion where
+ parseJSON (Object v) = ECRegion <$>
   v .: "region" <*>
   v .: "instanceTypes"
  parseJSON _ = mzero
 
 
-data EC2InstanceType = EC2InstanceType {
+data ECInstanceType = ECInstanceType {
  typeI :: String,
- sizes :: [EC2Size]
+ sizes :: [ECSize]
 } deriving (Show, Read, Eq)
 
-instance FromJSON EC2InstanceType where
- parseJSON (Object v) = EC2InstanceType <$>
+instance FromJSON ECInstanceType where
+ parseJSON (Object v) = ECInstanceType <$>
   v .: "type" <*>
   v .: "sizes"
  parseJSON _ = mzero
 
 
-data EC2Size = EC2Size {
+data ECSize = ECSize {
  size :: String,
  vCPU :: String,
  ecu :: String,
  memoryGiB :: String,
  storageGB :: String,
- valueColumns :: [EC2ValueColumns]
+ valueColumns :: [ECValueColumns]
 } deriving (Show, Read, Eq)
 
-instance FromJSON EC2Size where
- parseJSON (Object v) = EC2Size <$>
+instance FromJSON ECSize where
+ parseJSON (Object v) = ECSize <$>
   v .: "size" <*>
   v .: "vCPU" <*>
   v .: "ECU" <*>
@@ -92,13 +92,13 @@ instance FromJSON EC2Size where
  parseJSON _ = mzero
 
 
-data EC2ValueColumns = EC2ValueColumns {
+data ECValueColumns = ECValueColumns {
  name :: String,
  prices :: CurrencyObject
 } deriving (Show, Read, Eq)
 
-instance FromJSON EC2ValueColumns where
- parseJSON (Object v) = EC2ValueColumns <$>
+instance FromJSON ECValueColumns where
+ parseJSON (Object v) = ECValueColumns <$>
   v .: "name" <*>
   v .: "prices"
  parseJSON _ = mzero

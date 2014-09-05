@@ -1,6 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module System.DevUtils.Base.Cloud.Amazon.EC2 (
- EC2 (..),
+module System.DevUtils.Base.Cloud.Amazon.EC2.Reserved (
  EC2Root (..),
  EC2Config (..),
  EC2Region (..),
@@ -16,10 +15,6 @@ import Data.Aeson
 import Control.Applicative
 import Control.Monad
 
-data EC2 = EC2 {
-}
-
-
 data EC2Root = EC2Root {
  vers :: Version,
  config :: EC2Config
@@ -33,17 +28,11 @@ instance FromJSON EC2Root where
 
 
 data EC2Config = EC2Config {
- currencies :: [Currency],
- rate :: Rate,
- valueColumnsC :: [String],
  regions :: [EC2Region]
 } deriving (Show, Read, Eq)
 
 instance FromJSON EC2Config where
  parseJSON (Object v) = EC2Config <$>
-  v .: "currencies" <*>
-  v .: "rate" <*>
-  v .: "valueColumns" <*>
   v .: "regions"
  parseJSON _ = mzero
 
@@ -61,44 +50,36 @@ instance FromJSON EC2Region where
 
 
 data EC2InstanceType = EC2InstanceType {
- typeI :: String,
  sizes :: [EC2Size]
 } deriving (Show, Read, Eq)
 
 instance FromJSON EC2InstanceType where
  parseJSON (Object v) = EC2InstanceType <$>
-  v .: "type" <*>
   v .: "sizes"
  parseJSON _ = mzero
 
 
 data EC2Size = EC2Size {
  size :: String,
- vCPU :: String,
- ecu :: String,
- memoryGiB :: String,
- storageGB :: String,
  valueColumns :: [EC2ValueColumns]
 } deriving (Show, Read, Eq)
 
 instance FromJSON EC2Size where
  parseJSON (Object v) = EC2Size <$>
   v .: "size" <*>
-  v .: "vCPU" <*>
-  v .: "ECU" <*>
-  v .: "memoryGiB" <*>
-  v .: "storageGB" <*>
   v .: "valueColumns"
  parseJSON _ = mzero
 
 
 data EC2ValueColumns = EC2ValueColumns {
  name :: String,
+ rate :: Maybe String,
  prices :: CurrencyObject
 } deriving (Show, Read, Eq)
 
 instance FromJSON EC2ValueColumns where
  parseJSON (Object v) = EC2ValueColumns <$>
   v .: "name" <*>
+  v .:? "rate" <*>
   v .: "prices"
  parseJSON _ = mzero

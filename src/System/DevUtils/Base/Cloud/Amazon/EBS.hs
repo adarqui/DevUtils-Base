@@ -41,7 +41,7 @@ instance FromJSON EBSConfig where
 
 
 data EBSRegion = EBSRegion {
- region :: Region,
+ region :: String,
  types :: [EBSType]
 } deriving (Show, Read, Eq)
 

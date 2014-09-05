@@ -1,0 +1,2424 @@
+{
+    "vers": 0.01,
+    "config": {
+        "rate": "perhr",
+        "valueColumns": [
+            "linux"
+        ],
+        "currencies": [
+            "USD"
+        ],
+        "regions": [
+            {
+                "region": "us-east",
+                "instanceTypes": [
+                    {
+                        "type": "stdODI",
+                        "sizes": [
+                            {
+                                "size": "m1.small",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.066"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.132"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.264"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.528"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "secgenstdODI",
+                        "sizes": [
+                            {
+                                "size": "m3.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.124"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.248"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.495"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.990"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiMemODI",
+                        "sizes": [
+                            {
+                                "size": "m2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.451"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.902"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.804"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiCPUODI",
+                        "sizes": [
+                            {
+                                "size": "c3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.165"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.330"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.660"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.320"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.640"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.160"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.638"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "clusterComputeI",
+                        "sizes": [
+                            {
+                                "size": "cc2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.400"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "clusterHiMemODI",
+                        "sizes": [
+                            {
+                                "size": "cr1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.500"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GPUI",
+                        "sizes": [
+                            {
+                                "size": "g2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.715"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storageCurrentGen",
+                        "sizes": [
+                            {
+                                "size": "i2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.938"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.876"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.751"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "7.502"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "hs1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.600"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storagePreviousGen",
+                        "sizes": [
+                            {
+                                "size": "hi1.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.100"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "us-west-2",
+                "instanceTypes": [
+                    {
+                        "type": "stdODI",
+                        "sizes": [
+                            {
+                                "size": "m1.small",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.066"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.132"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.264"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.528"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "secgenstdODI",
+                        "sizes": [
+                            {
+                                "size": "m3.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.124"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.248"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.495"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.990"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiMemODI",
+                        "sizes": [
+                            {
+                                "size": "m2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.451"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.902"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.804"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiCPUODI",
+                        "sizes": [
+                            {
+                                "size": "c3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.165"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.330"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.660"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.320"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.640"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.160"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.638"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "clusterComputeI",
+                        "sizes": [
+                            {
+                                "size": "cc2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.400"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "clusterHiMemODI",
+                        "sizes": [
+                            {
+                                "size": "cr1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.500"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GPUI",
+                        "sizes": [
+                            {
+                                "size": "g2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.715"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storageCurrentGen",
+                        "sizes": [
+                            {
+                                "size": "i2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.938"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.876"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.751"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "7.502"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "hs1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.600"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storagePreviousGen",
+                        "sizes": [
+                            {
+                                "size": "hi1.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.100"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "us-west",
+                "instanceTypes": [
+                    {
+                        "type": "stdODI",
+                        "sizes": [
+                            {
+                                "size": "m1.small",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.072"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.143"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.286"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.572"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "secgenstdODI",
+                        "sizes": [
+                            {
+                                "size": "m3.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.136"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.273"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.545"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.089"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiMemODI",
+                        "sizes": [
+                            {
+                                "size": "m2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.506"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.012"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.024"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiCPUODI",
+                        "sizes": [
+                            {
+                                "size": "c3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.188"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.376"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.751"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.503"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.005"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.182"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.726"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GPUI",
+                        "sizes": [
+                            {
+                                "size": "g2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.772"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storageCurrentGen",
+                        "sizes": [
+                            {
+                                "size": "i2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.032"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.064"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.126"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "8.252"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "eu-ireland",
+                "instanceTypes": [
+                    {
+                        "type": "stdODI",
+                        "sizes": [
+                            {
+                                "size": "m1.small",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.072"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.143"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.286"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.572"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "secgenstdODI",
+                        "sizes": [
+                            {
+                                "size": "m3.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.136"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.273"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.545"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.089"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiMemODI",
+                        "sizes": [
+                            {
+                                "size": "m2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.506"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.012"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.024"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiCPUODI",
+                        "sizes": [
+                            {
+                                "size": "c3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.188"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.376"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.751"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.503"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.005"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.182"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.726"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "clusterComputeI",
+                        "sizes": [
+                            {
+                                "size": "cc2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.700"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "clusterHiMemODI",
+                        "sizes": [
+                            {
+                                "size": "cr1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.410"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GPUI",
+                        "sizes": [
+                            {
+                                "size": "g2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.772"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storageCurrentGen",
+                        "sizes": [
+                            {
+                                "size": "i2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.032"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.064"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.126"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "8.252"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "hs1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.900"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storagePreviousGen",
+                        "sizes": [
+                            {
+                                "size": "hi1.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.100"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "apac-sin",
+                "instanceTypes": [
+                    {
+                        "type": "stdODI",
+                        "sizes": [
+                            {
+                                "size": "m1.small",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.088"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.176"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.352"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "secgenstdODI",
+                        "sizes": [
+                            {
+                                "size": "m3.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.174"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.347"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.693"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.386"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiMemODI",
+                        "sizes": [
+                            {
+                                "size": "m2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.545"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.089"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.178"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiCPUODI",
+                        "sizes": [
+                            {
+                                "size": "c3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.208"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.416"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.832"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.663"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.326"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.201"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.803"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storageCurrentGen",
+                        "sizes": [
+                            {
+                                "size": "i2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.120"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.239"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.477"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "8.954"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "hs1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "5.570"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "apac-tokyo",
+                "instanceTypes": [
+                    {
+                        "type": "stdODI",
+                        "sizes": [
+                            {
+                                "size": "m1.small",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.097"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.193"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.385"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.770"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "secgenstdODI",
+                        "sizes": [
+                            {
+                                "size": "m3.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.188"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.376"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.752"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.505"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiMemODI",
+                        "sizes": [
+                            {
+                                "size": "m2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.556"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.111"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.222"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiCPUODI",
+                        "sizes": [
+                            {
+                                "size": "c3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.211"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.421"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.843"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.685"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.370"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.204"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.814"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "clusterComputeI",
+                        "sizes": [
+                            {
+                                "size": "cc2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.960"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "clusterHiMemODI",
+                        "sizes": [
+                            {
+                                "size": "cr1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.310"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "GPUI",
+                        "sizes": [
+                            {
+                                "size": "g2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.037"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storageCurrentGen",
+                        "sizes": [
+                            {
+                                "size": "i2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.156"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.311"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.622"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "9.244"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "hs1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.440"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storagePreviousGen",
+                        "sizes": [
+                            {
+                                "size": "hi1.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.440"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "apac-syd",
+                "instanceTypes": [
+                    {
+                        "type": "stdODI",
+                        "sizes": [
+                            {
+                                "size": "m1.small",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.088"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.176"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.352"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "secgenstdODI",
+                        "sizes": [
+                            {
+                                "size": "m3.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.174"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.347"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.693"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.386"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiMemODI",
+                        "sizes": [
+                            {
+                                "size": "m2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.545"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.089"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.178"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiCPUODI",
+                        "sizes": [
+                            {
+                                "size": "c3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.208"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.416"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.832"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.663"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c3.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "3.326"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.201"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.803"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "storageCurrentGen",
+                        "sizes": [
+                            {
+                                "size": "i2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.120"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.239"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "4.477"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "i2.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "8.954"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "hs1.8xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "5.570"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "region": "sa-east-1",
+                "instanceTypes": [
+                    {
+                        "type": "stdODI",
+                        "sizes": [
+                            {
+                                "size": "m1.small",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.088"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.176"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.352"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.704"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "secgenstdODI",
+                        "sizes": [
+                            {
+                                "size": "m3.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.168"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.large",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.337"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.673"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m3.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.346"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiMemODI",
+                        "sizes": [
+                            {
+                                "size": "m2.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.594"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.2xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "1.188"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "m2.4xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "2.376"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "hiCPUODI",
+                        "sizes": [
+                            {
+                                "size": "c1.medium",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.220"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "size": "c1.xlarge",
+                                "valueColumns": [
+                                    {
+                                        "name": "linux",
+                                        "prices": {
+                                            "USD": "0.880"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
