@@ -36,23 +36,23 @@ ec2 <- B.readFile "etc/Cloud/Amazon/Pricing/EC2-Linux-DI-RI-Light.json"
 eitherDecode ec2 :: Either String EC2Root
 ```
 
-ElasticCache
+ElastiCache
 --
 
 ```
 :set -XOverloadedStrings
-import System.DevUtils.Base.Cloud.Amazon.ElasticCache
+import System.DevUtils.Base.Cloud.Amazon.ElastiCache
 import qualified Data.ByteString.Lazy as B
 import Data.Aeson
-ec <- B.readFile "etc/Cloud/Amazon/Pricing/ElasticCache-Cleaned-Standard.json"
+ec <- B.readFile "etc/Cloud/Amazon/Pricing/ElastiCache-Cleaned-Standard.json"
 eitherDecode ec :: Either String ECRoot
 ```
 
 :set -XOverloadedStrings
-import System.DevUtils.Base.Cloud.Amazon.ElasticCache.Reserved
+import System.DevUtils.Base.Cloud.Amazon.ElastiCache.Reserved
 import qualified Data.ByteString.Lazy as B
 import Data.Aeson
-ec <- B.readFile "etc/Cloud/Amazon/Pricing/ElasticCache-Cleaned-RI-Heavy-Standard.json"
+ec <- B.readFile "etc/Cloud/Amazon/Pricing/ElastiCache-Cleaned-RI-Heavy-Standard.json"
 eitherDecode ec :: Either String ECRoot
 
 
