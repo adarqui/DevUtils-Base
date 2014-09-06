@@ -31,6 +31,7 @@ library
    System.DevUtils.Base.Cloud.Amazon.EC2
    System.DevUtils.Base.Cloud.Amazon.EC2.Reserved
    System.DevUtils.Base.Cloud.Amazon.ElasticCache
+   System.DevUtils.Base.Cloud.Amazon.ElasticCache.Reserved
    System.DevUtils.Base.Cloud.Amazon.EBS
    System.DevUtils.Base.Cloud.Amazon.RDS
    System.DevUtils.Base.Cloud.Amazon.RDS.Reserved

@@ -1,11 +1,11 @@
 {-# LANGUAGE OverloadedStrings #-}
-module System.DevUtils.Base.Cloud.Amazon.ElasticCache (
- EC (..),
+module System.DevUtils.Base.Cloud.Amazon.ElasticCache.Reserved (
  ECRoot (..),
  ECConfig (..),
  ECRegion (..),
  ECInstanceType (..),
- ECTier (..)
+ ECTier (..),
+ ECValueColumns (..)
 ) where
 
 import System.DevUtils.Base.Cloud.Amazon.Misc
@@ -14,10 +14,6 @@ import System.DevUtils.Base.Currency
 import Data.Aeson
 import Control.Applicative
 import Control.Monad
-
-data EC = EC {
-}
-
 
 data ECRoot = ECRoot {
  vers :: Version,
@@ -42,36 +38,50 @@ instance FromJSON ECConfig where
 
 
 data ECRegion = ECRegion {
- region :: Region,
+ region :: String,
  instanceType :: [ECInstanceType]
 } deriving (Show, Read, Eq)
 
 instance FromJSON ECRegion where
  parseJSON (Object v) = ECRegion <$>
   v .: "region" <*>
-  v .: "types"
+  v .: "instanceTypes"
  parseJSON _ = mzero
 
 
 data ECInstanceType = ECInstanceType {
- name :: String,
+ typeI :: String,
  tiers :: [ECTier]
 } deriving (Show, Read, Eq)
 
 instance FromJSON ECInstanceType where
  parseJSON (Object v) = ECInstanceType <$>
-  v .: "name" <*>
+  v .: "type" <*>
   v .: "tiers"
  parseJSON _ = mzero
 
 
 data ECTier = ECTier {
- nameT :: String,
- prices :: CurrencyObject
+ size :: String,
+ valueColumns :: [ECValueColumns]
 } deriving (Show, Read, Eq)
 
 instance FromJSON ECTier where
  parseJSON (Object v) = ECTier <$>
+  v .: "size" <*>
+  v .: "valueColumns"
+ parseJSON _ = mzero
+
+
+data ECValueColumns = ECValueColumns {
+ name :: String,
+ rate :: Maybe String,
+ prices :: CurrencyObject
+} deriving (Show, Read, Eq)
+
+instance FromJSON ECValueColumns where
+ parseJSON (Object v) = ECValueColumns <$>
   v .: "name" <*>
+  v .:? "rate" <*>
   v .: "prices"
  parseJSON _ = mzero

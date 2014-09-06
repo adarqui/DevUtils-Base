@@ -1,6 +1,9 @@
 aws misc:
 =========
 
+EBS
+--
+
 ```
 :set -XOverloadedStrings
 import System.DevUtils.Base.Cloud.Amazon.EBS
@@ -9,6 +12,9 @@ import Data.Aeson
 ebs <- B.readFile "etc/Cloud/Amazon/Pricing/EBS.json" 
 eitherDecode ebs :: Either String EBSRoot
 ```
+
+EC2
+--
 
 ```
 :set -XOverloadedStrings
@@ -30,14 +36,28 @@ ec2 <- B.readFile "etc/Cloud/Amazon/Pricing/EC2-Linux-DI-RI-Light.json"
 eitherDecode ec2 :: Either String EC2Root
 ```
 
+ElasticCache
+--
+
 ```
 :set -XOverloadedStrings
 import System.DevUtils.Base.Cloud.Amazon.ElasticCache
 import qualified Data.ByteString.Lazy as B
 import Data.Aeson
-ec <- B.readFile "etc/Cloud/Amazon/Pricing/ElasticCache.json"
+ec <- B.readFile "etc/Cloud/Amazon/Pricing/ElasticCache-Cleaned-Standard.json"
 eitherDecode ec :: Either String ECRoot
 ```
+
+:set -XOverloadedStrings
+import System.DevUtils.Base.Cloud.Amazon.ElasticCache.Reserved
+import qualified Data.ByteString.Lazy as B
+import Data.Aeson
+ec <- B.readFile "etc/Cloud/Amazon/Pricing/ElasticCache-Cleaned-RI-Heavy-Standard.json"
+eitherDecode ec :: Either String ECRoot
+
+
+RDS
+--
 
 ```
 :set -XOverloadedStrings
