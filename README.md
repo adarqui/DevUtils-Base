@@ -27,6 +27,15 @@ eitherDecode ec2 :: Either String EC2Root
 
 ```
 :set -XOverloadedStrings
+import System.DevUtils.Base.Cloud.Amazon.EC2
+import qualified Data.ByteString.Lazy as B
+import Data.Aeson
+ec2 <- B.readFile "etc/Cloud/Amazon/Pricing/EC2-Linux-DI-OnDemand.json" 
+eitherDecode ec2 :: Either String EC2Root
+```
+
+```
+:set -XOverloadedStrings
 import System.DevUtils.Base.Cloud.Amazon.EC2.Reserved
 import qualified Data.ByteString.Lazy as B
 import Data.Aeson
@@ -76,3 +85,22 @@ import Data.Aeson
 rds <- B.readFile "etc/Cloud/Amazon/Pricing/RDS-MySQL-Reserved-Heavy.json"
 eitherDecode rds :: Either String RDSRoot
 ```
+
+```
+:set -XOverloadedStrings
+import System.DevUtils.Base.Cloud.Amazon.S3
+import qualified Data.ByteString.Lazy as B
+import Data.Aeson
+s3 <- B.readFile "etc/Cloud/Amazon/Pricing/S3.json"
+eitherDecode s3 :: Either String S3Root
+```
+
+```
+import System.DevUtils.Base.Cloud.Amazon
+j <- populate defaultJSONLocations
+```
+
+```
+import Control.Monad
+import System.DevUtils.Base.Cloud.Amazon
+liftM generalize $  populate defaultJSONLocations

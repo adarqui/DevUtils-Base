@@ -28,6 +28,7 @@ library
    System.DevUtils.Base.Data.List
    System.DevUtils.Base.Data.Map
 
+   System.DevUtils.Base.Cloud.Amazon
    System.DevUtils.Base.Cloud.Amazon.EC2
    System.DevUtils.Base.Cloud.Amazon.EC2.Reserved
    System.DevUtils.Base.Cloud.Amazon.ElastiCache
@@ -35,6 +36,7 @@ library
    System.DevUtils.Base.Cloud.Amazon.EBS
    System.DevUtils.Base.Cloud.Amazon.RDS
    System.DevUtils.Base.Cloud.Amazon.RDS.Reserved
+   System.DevUtils.Base.Cloud.Amazon.S3
    System.DevUtils.Base.Cloud.Amazon.Misc
 
    System.DevUtils.Base.Currency
