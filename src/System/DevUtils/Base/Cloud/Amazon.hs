@@ -189,7 +189,7 @@ ec2ToGP'ri'or'di ec2 rate'type'prefix =
       True -> []
       otherwise ->
        [GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = read (usd $ EC2Reserved.prices y1) :: Double, rate = read (usd $ EC2Reserved.prices y1hr) :: Double },
-       GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = read (usd $ EC2Reserved.prices y1) :: Double, rate = read (usd $ EC2Reserved.prices y1hr) :: Double }]
+       GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = read (usd $ EC2Reserved.prices y3) :: Double, rate = read (usd $ EC2Reserved.prices y3hr) :: Double }]
    ) $ EC2Reserved.sizes instanceType
   ) $ EC2Reserved.instanceType region
  ) $ EC2Reserved.regions $ EC2Reserved.config ec2
