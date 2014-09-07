@@ -162,6 +162,7 @@ ec2ToGP ec2 =
   ) $ EC2.instanceType region
  ) $ EC2.regions $ EC2.config ec2
 
+{-
 ec2ToGP'ri'or'di ec2 rate'type'prefix =
  concat $ concat $ concat $ map (\region ->
   map (\instanceType ->
@@ -169,6 +170,26 @@ ec2ToGP'ri'or'di ec2 rate'type'prefix =
     map (\values ->
      GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ EC2Reserved.name values, upfront = 0.0, rate = read (usd $ EC2Reserved.prices $ head $ EC2Reserved.valueColumns size) :: Double }
     ) $ EC2Reserved.valueColumns size
+   ) $ EC2Reserved.sizes instanceType
+  ) $ EC2Reserved.instanceType region
+ ) $ EC2Reserved.regions $ EC2Reserved.config ec2
+-}
+ec2ToGP'ri'or'di ec2 rate'type'prefix =
+ concat $ concat $ concat $ map (\region ->
+  map (\instanceType ->
+   map (\size ->
+    let
+     v = EC2Reserved.valueColumns size
+     y1 = v !! 0
+     y1hr = v !! 1
+     y3 = v !! 2 
+     y3hr = v !! 3
+    in
+     case (any (\x -> (usd $ EC2Reserved.prices x) =="N/A") v) of
+      True -> []
+      otherwise ->
+       [GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = read (usd $ EC2Reserved.prices y1) :: Double, rate = read (usd $ EC2Reserved.prices y1hr) :: Double },
+       GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = read (usd $ EC2Reserved.prices y1) :: Double, rate = read (usd $ EC2Reserved.prices y1hr) :: Double }]
    ) $ EC2Reserved.sizes instanceType
   ) $ EC2Reserved.instanceType region
  ) $ EC2Reserved.regions $ EC2Reserved.config ec2
