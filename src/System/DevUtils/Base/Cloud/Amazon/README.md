@@ -18,6 +18,9 @@ pricing/ec2/linux-ri-heavy.js
 pricing/ec2/linux-ri-light.js
 pricing/ec2/linux-ri-medium.js
 
+http://aws-assets-pricing-prod.s3.amazonaws.com/pricing/rds/mysql/pricing-light-utilization-reserved-instances.js
+
+
 
 http://aws-assets-pricing-prod.s3.amazonaws.com/pricing/dedicated-instances/di-linux-od.js
 

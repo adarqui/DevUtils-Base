@@ -45,7 +45,8 @@ data JSONLocations = JSONLocations {
  ecReservedPath'Medium :: FilePath,
  ecReservedPath'Heavy :: FilePath,
  rdsPath'onDemand :: FilePath,
- rdsReservedPath :: FilePath,
+ rdsReservedPath'Light :: FilePath,
+ rdsReservedPath'Medium :: FilePath,
  rdsReservedPath'Heavy :: FilePath,
  s3Path :: FilePath
 } deriving (Show, Read)
@@ -75,8 +76,9 @@ data Pricing = Pricing {
  ec'ri'medium :: ECReserved.ECRoot,
  ec'ri'heavy :: ECReserved.ECRoot,
  rds'onDemand :: RDS.RDSRoot,
+ rds'ri'light :: RDSReserved.RDSRoot,
+ rds'ri'medium :: RDSReserved.RDSRoot,
  rds'ri'heavy :: RDSReserved.RDSRoot,
- rds'ri :: RDSReserved.RDSRoot,
  s3 :: S3.S3Root
 } deriving (Show, Read)
 
@@ -94,8 +96,9 @@ defaultJSONLocations = JSONLocations {
  ecReservedPath'Light = p "ElastiCache-Cleaned-RI-Light-Standard",
  ecReservedPath'Medium = p "ElastiCache-Cleaned-RI-Medium-Standard",
  ecReservedPath'Heavy = p "ElastiCache-Cleaned-RI-Heavy-Standard",
+ rdsReservedPath'Light = p "RDS-MySQL-Reserved-Light",
+ rdsReservedPath'Medium = p "RDS-MySQL-Reserved-Medium",
  rdsReservedPath'Heavy = p "RDS-MySQL-Reserved-Heavy",
- rdsReservedPath = p "RDS-MySQL-Reserved",
  rdsPath'onDemand = p "RDS-MySQL-Standard",
  s3Path = p "S3"
 }
@@ -116,7 +119,8 @@ populate JSONLocations{..} = do
  _ec'ri'medium <- B.readFile ecReservedPath'Medium
  _ec'ri'heavy <- B.readFile ecReservedPath'Heavy
  _rds'onDemand <- B.readFile rdsPath'onDemand
- _rds'ri <- B.readFile rdsReservedPath
+ _rds'ri'light <- B.readFile rdsReservedPath'Light
+ _rds'ri'medium <- B.readFile rdsReservedPath'Medium
  _rds'ri'heavy <- B.readFile rdsReservedPath'Heavy
  _s3 <- B.readFile s3Path
  return $ Pricing {
@@ -134,7 +138,8 @@ populate JSONLocations{..} = do
   ec'ri'medium = fromJust (decode' _ec'ri'medium :: Maybe ECReserved.ECRoot),
   ec'ri'heavy = fromJust (decode' _ec'ri'heavy :: Maybe ECReserved.ECRoot),
   rds'onDemand = fromJust (decode' _rds'onDemand :: Maybe RDS.RDSRoot),
-  rds'ri = fromJust (decode' _rds'ri :: Maybe RDSReserved.RDSRoot),
+  rds'ri'light = fromJust (decode' _rds'ri'light :: Maybe RDSReserved.RDSRoot),
+  rds'ri'medium = fromJust (decode' _rds'ri'medium :: Maybe RDSReserved.RDSRoot),
   rds'ri'heavy = fromJust (decode' _rds'ri'heavy :: Maybe RDSReserved.RDSRoot),
   s3 = fromJust (decode' _s3 :: Maybe S3.S3Root)
  }
