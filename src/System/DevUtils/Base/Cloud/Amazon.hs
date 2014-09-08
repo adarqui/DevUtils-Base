@@ -2,6 +2,8 @@
 
 -- parsing all of this pricing information is pretty brutal...
 
+-- ... this is disgusting.. sorry.
+
 module System.DevUtils.Base.Cloud.Amazon (
  JSONLocations (..),
  Pricing (..),
@@ -10,7 +12,12 @@ module System.DevUtils.Base.Cloud.Amazon (
  defaultJSONLocations,
  generalize,
  ec2ToGP,
+ ec2ToGP'ri'or'di,
  ebsToGP,
+ rdsToGP,
+ rdsToGP'ri'or'di,
+ ecToGP,
+ ecToGP'ri'or'di,
  s3ToGP
 ) where
 
@@ -167,18 +174,6 @@ ec2ToGP ec2 =
   ) $ EC2.instanceType region
  ) $ EC2.regions $ EC2.config ec2
 
-{-
-ec2ToGP'ri'or'di ec2 rate'type'prefix =
- concat $ concat $ concat $ map (\region ->
-  map (\instanceType ->
-   map (\size ->
-    map (\values ->
-     GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ EC2Reserved.name values, upfront = 0.0, rate = read (usd $ EC2Reserved.prices $ head $ EC2Reserved.valueColumns size) :: Double }
-    ) $ EC2Reserved.valueColumns size
-   ) $ EC2Reserved.sizes instanceType
-  ) $ EC2Reserved.instanceType region
- ) $ EC2Reserved.regions $ EC2Reserved.config ec2
--}
 ec2ToGP'ri'or'di ec2 rate'type'prefix =
  concat $ concat $ concat $ map (\region ->
   map (\instanceType ->
@@ -208,4 +203,69 @@ ebsToGP ebs =
   ) $ EBS.types region
  ) $ EBS.regions $ EBS.config ebs
 
-s3ToGP s3 = True
+rdsToGP rds =
+ concat $ concat $ map (\region ->
+  map (\types ->
+   map (\tier ->
+    GeneralPricing { fam = "rds", region = RDS.region region, name = RDS.name tier, rate'type = "onDemand", upfront = 0.0, rate = read (usd $ RDS.prices tier) :: Double }
+   ) $ RDS.tiers types
+  ) $ RDS.types region
+ ) $ RDS.regions $ RDS.config rds
+
+rdsToGP'ri'or'di rds rate'type'prefix =
+ concat $ concat $ concat $ map (\region ->
+  map (\instanceType ->
+   map (\size ->
+    let
+     v = RDSReserved.valueColumns size
+     y1 = v !! 0
+     y1hr = v !! 1
+     y3 = v !! 2 
+     y3hr = v !! 3
+    in
+     case (any (\x -> (usd $ RDSReserved.prices x) =="N/A") v) of
+      True -> []
+      otherwise ->
+       [GeneralPricing { fam = "rds", region = RDSReserved.region region, name = RDSReserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = read (usd $ RDSReserved.prices y1) :: Double, rate = read (usd $ RDSReserved.prices y1hr) :: Double },
+       GeneralPricing { fam = "rds", region = RDSReserved.region region, name = RDSReserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = read (usd $ RDSReserved.prices y3) :: Double, rate = read (usd $ RDSReserved.prices y3hr) :: Double }]
+   ) $ RDSReserved.tiers instanceType
+  ) $ RDSReserved.instanceType region
+ ) $ RDSReserved.regions $ RDSReserved.config rds
+
+ecToGP ec =
+ concat $ concat $ map (\region ->
+  map (\types ->
+   map (\tier ->
+    GeneralPricing { fam = "ec", region = EC.region region, name = EC.nameT tier, rate'type = "onDemand", upfront = 0.0, rate = read (usd $ EC.prices tier) :: Double }
+   ) $ EC.tiers types
+  ) $ EC.types region
+ ) $ EC.regions $ EC.config ec
+
+ecToGP'ri'or'di ec rate'type'prefix =
+ concat $ concat $ concat $ map (\region ->
+  map (\instanceType ->
+   map (\size ->
+    let
+     v = ECReserved.valueColumns size
+     y1 = v !! 0
+     y1hr = v !! 1
+     y3 = v !! 2 
+     y3hr = v !! 3
+    in
+     case (any (\x -> (usd $ ECReserved.prices x) =="N/A") v) of
+      True -> []
+      otherwise ->
+       [GeneralPricing { fam = "ec", region = ECReserved.region region, name = ECReserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = read (usd $ ECReserved.prices y1) :: Double, rate = read (usd $ ECReserved.prices y1hr) :: Double },
+       GeneralPricing { fam = "ec", region = ECReserved.region region, name = ECReserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = read (usd $ ECReserved.prices y3) :: Double, rate = read (usd $ ECReserved.prices y3hr) :: Double }]
+   ) $ ECReserved.tiers instanceType
+  ) $ ECReserved.instanceType region
+ ) $ ECReserved.regions $ ECReserved.config ec
+
+s3ToGP s3 =
+ concat $ concat $ map (\region ->
+  map (\tier ->
+   map (\storageType ->
+    GeneralPricing { fam = "s3", region = S3.region region, name = S3.name tier, rate'type = S3.typeV storageType, upfront = 0.0, rate = read (usd $ S3.prices storageType) :: Double }
+   ) $ S3.storageTypes tier
+  ) $ S3.tiers region
+ ) $ S3.regions $ S3.config s3

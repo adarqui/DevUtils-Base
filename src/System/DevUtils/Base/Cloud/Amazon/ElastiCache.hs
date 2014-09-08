@@ -4,7 +4,7 @@ module System.DevUtils.Base.Cloud.Amazon.ElastiCache (
  ECRoot (..),
  ECConfig (..),
  ECRegion (..),
- ECInstanceType (..),
+ ECType (..),
  ECTier (..)
 ) where
 
@@ -42,8 +42,8 @@ instance FromJSON ECConfig where
 
 
 data ECRegion = ECRegion {
- region :: Region,
- instanceType :: [ECInstanceType]
+ region :: String,
+ types :: [ECType]
 } deriving (Show, Read, Eq)
 
 instance FromJSON ECRegion where
@@ -53,13 +53,13 @@ instance FromJSON ECRegion where
  parseJSON _ = mzero
 
 
-data ECInstanceType = ECInstanceType {
+data ECType = ECType {
  name :: String,
  tiers :: [ECTier]
 } deriving (Show, Read, Eq)
 
-instance FromJSON ECInstanceType where
- parseJSON (Object v) = ECInstanceType <$>
+instance FromJSON ECType where
+ parseJSON (Object v) = ECType <$>
   v .: "name" <*>
   v .: "tiers"
  parseJSON _ = mzero
