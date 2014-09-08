@@ -67,7 +67,7 @@ data GeneralPricing = GeneralPricing {
  rate'type :: String,
  upfront :: Double,
  rate :: Double 
-} deriving (Show, Read)
+} deriving (Show, Read, Eq, Ord)
 
 data Pricing = Pricing {
  ebs :: EBS.EBSRoot,
