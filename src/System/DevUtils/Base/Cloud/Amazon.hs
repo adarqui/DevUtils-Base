@@ -162,7 +162,16 @@ generalize Pricing{..} =
    ec2ToGP'ri'or'di ec2'di'light "di-light-",
    ec2ToGP'ri'or'di ec2'di'medium "di-medium-",
    ec2ToGP'ri'or'di ec2'di'heavy "di-heavy-",
-   ebsToGP ebs
+   ebsToGP ebs,
+   ecToGP ec'onDemand,
+   ecToGP'ri'or'di ec'ri'light "ri-light-",
+   ecToGP'ri'or'di ec'ri'medium "ri-medium-",
+   ecToGP'ri'or'di ec'ri'heavy "ri-heavy-",
+   rdsToGP rds'onDemand,
+   rdsToGP'ri'or'di rds'ri'light "ri-light-",
+   rdsToGP'ri'or'di rds'ri'medium "ri-medium-",
+   rdsToGP'ri'or'di rds'ri'heavy "ri-heavy-",
+   s3ToGP s3
   ]
 
 ec2ToGP ec2 =
