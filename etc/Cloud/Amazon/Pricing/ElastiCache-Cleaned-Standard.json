@@ -21,9 +21,21 @@
                             },
                             {
                                 "prices": {
+                                    "USD": "0.302"
+                                },
+                                "name": "cache.m2.xlarge"
+                            },
+                            {
+                                "prices": {
                                     "USD": "0.364"
                                 },
                                 "name": "cache.m3.xlarge"
+                            },
+                            {
+                                "prices": {
+                                    "USD": "0.602"
+                                },
+                                "name": "cache.m2.2xlarge"
                             },
                             {
                                 "prices": {
