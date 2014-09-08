@@ -36,6 +36,7 @@ import System.DevUtils.Base.Cloud.Amazon.Misc
 import qualified Data.ByteString.Lazy as B
 import Data.Aeson
 import Data.Maybe
+import Data.Char
 
 data JSONLocations = JSONLocations {
  ebsPath :: FilePath,
@@ -178,7 +179,7 @@ ec2ToGP ec2 =
  concat $ concat $ map (\region ->
   map (\instanceType ->
    map (\size ->
-    GeneralPricing { fam = "ec2", region = EC2.region region, name = EC2.size size, rate'type = "onDemand", upfront = 0.0, rate = read (usd $ EC2.prices $ head $ EC2.valueColumns size) :: Double }
+    GeneralPricing { fam = "ec2", region = EC2.region region, name = EC2.size size, rate'type = "onDemand", upfront = 0.0, rate = readCurrency (usd $ EC2.prices $ head $ EC2.valueColumns size) }
    ) $ EC2.sizes instanceType
   ) $ EC2.instanceType region
  ) $ EC2.regions $ EC2.config ec2
@@ -197,8 +198,8 @@ ec2ToGP'ri'or'di ec2 rate'type'prefix =
      case (any (\x -> (usd $ EC2Reserved.prices x) =="N/A") v) of
       True -> []
       otherwise ->
-       [GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = read (usd $ EC2Reserved.prices y1) :: Double, rate = read (usd $ EC2Reserved.prices y1hr) :: Double },
-       GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = read (usd $ EC2Reserved.prices y3) :: Double, rate = read (usd $ EC2Reserved.prices y3hr) :: Double }]
+       [GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = readCurrency (usd $ EC2Reserved.prices y1), rate = readCurrency (usd $ EC2Reserved.prices y1hr) },
+       GeneralPricing { fam = "ec2", region = EC2Reserved.region region, name = EC2Reserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = readCurrency (usd $ EC2Reserved.prices y3), rate = readCurrency (usd $ EC2Reserved.prices y3hr) }]
    ) $ EC2Reserved.sizes instanceType
   ) $ EC2Reserved.instanceType region
  ) $ EC2Reserved.regions $ EC2Reserved.config ec2
@@ -207,7 +208,7 @@ ebsToGP ebs =
  concat $ concat $ map (\region ->
   map (\types ->
    map (\values ->
-    GeneralPricing { fam = "ebs", region = EBS.region region, name = EBS.name types, rate'type = EBS.rateV values, upfront = 0.0, rate = read (usd $ EBS.prices values) :: Double }
+    GeneralPricing { fam = "ebs", region = EBS.region region, name = EBS.name types, rate'type = EBS.rateV values, upfront = 0.0, rate = readCurrency (usd $ EBS.prices values) }
    ) $ EBS.values types
   ) $ EBS.types region
  ) $ EBS.regions $ EBS.config ebs
@@ -216,7 +217,7 @@ rdsToGP rds =
  concat $ concat $ map (\region ->
   map (\types ->
    map (\tier ->
-    GeneralPricing { fam = "rds", region = RDS.region region, name = RDS.name tier, rate'type = "onDemand", upfront = 0.0, rate = read (usd $ RDS.prices tier) :: Double }
+    GeneralPricing { fam = "rds", region = RDS.region region, name = RDS.name tier, rate'type = "onDemand", upfront = 0.0, rate = readCurrency (usd $ RDS.prices tier) }
    ) $ RDS.tiers types
   ) $ RDS.types region
  ) $ RDS.regions $ RDS.config rds
@@ -235,8 +236,8 @@ rdsToGP'ri'or'di rds rate'type'prefix =
      case (any (\x -> (usd $ RDSReserved.prices x) =="N/A") v) of
       True -> []
       otherwise ->
-       [GeneralPricing { fam = "rds", region = RDSReserved.region region, name = RDSReserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = read (usd $ RDSReserved.prices y1) :: Double, rate = read (usd $ RDSReserved.prices y1hr) :: Double },
-       GeneralPricing { fam = "rds", region = RDSReserved.region region, name = RDSReserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = read (usd $ RDSReserved.prices y3) :: Double, rate = read (usd $ RDSReserved.prices y3hr) :: Double }]
+       [GeneralPricing { fam = "rds", region = RDSReserved.region region, name = RDSReserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = readCurrency (usd $ RDSReserved.prices y1), rate = readCurrency (usd $ RDSReserved.prices y1hr) },
+       GeneralPricing { fam = "rds", region = RDSReserved.region region, name = RDSReserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = readCurrency (usd $ RDSReserved.prices y3), rate = readCurrency (usd $ RDSReserved.prices y3hr) }]
    ) $ RDSReserved.tiers instanceType
   ) $ RDSReserved.instanceType region
  ) $ RDSReserved.regions $ RDSReserved.config rds
@@ -245,7 +246,7 @@ ecToGP ec =
  concat $ concat $ map (\region ->
   map (\types ->
    map (\tier ->
-    GeneralPricing { fam = "ec", region = EC.region region, name = EC.nameT tier, rate'type = "onDemand", upfront = 0.0, rate = read (usd $ EC.prices tier) :: Double }
+    GeneralPricing { fam = "ec", region = EC.region region, name = EC.nameT tier, rate'type = "onDemand", upfront = 0.0, rate = readCurrency (usd $ EC.prices tier) }
    ) $ EC.tiers types
   ) $ EC.types region
  ) $ EC.regions $ EC.config ec
@@ -264,8 +265,8 @@ ecToGP'ri'or'di ec rate'type'prefix =
      case (any (\x -> (usd $ ECReserved.prices x) =="N/A") v) of
       True -> []
       otherwise ->
-       [GeneralPricing { fam = "ec", region = ECReserved.region region, name = ECReserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = read (usd $ ECReserved.prices y1) :: Double, rate = read (usd $ ECReserved.prices y1hr) :: Double },
-       GeneralPricing { fam = "ec", region = ECReserved.region region, name = ECReserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = read (usd $ ECReserved.prices y3) :: Double, rate = read (usd $ ECReserved.prices y3hr) :: Double }]
+       [GeneralPricing { fam = "ec", region = ECReserved.region region, name = ECReserved.size size, rate'type = rate'type'prefix ++ "y1", upfront = readCurrency (usd $ ECReserved.prices y1), rate = readCurrency (usd $ ECReserved.prices y1hr) },
+       GeneralPricing { fam = "ec", region = ECReserved.region region, name = ECReserved.size size, rate'type = rate'type'prefix ++ "y3", upfront = readCurrency (usd $ ECReserved.prices y3), rate = readCurrency (usd $ ECReserved.prices y3hr) }]
    ) $ ECReserved.tiers instanceType
   ) $ ECReserved.instanceType region
  ) $ ECReserved.regions $ ECReserved.config ec
@@ -274,7 +275,10 @@ s3ToGP s3 =
  concat $ concat $ map (\region ->
   map (\tier ->
    map (\storageType ->
-    GeneralPricing { fam = "s3", region = S3.region region, name = S3.name tier, rate'type = S3.typeV storageType, upfront = 0.0, rate = read (usd $ S3.prices storageType) :: Double }
+    GeneralPricing { fam = "s3", region = S3.region region, name = S3.name tier, rate'type = S3.typeV storageType, upfront = 0.0, rate = readCurrency (usd $ S3.prices storageType) :: Double }
    ) $ S3.storageTypes tier
   ) $ S3.tiers region
  ) $ S3.regions $ S3.config s3
+
+
+readCurrency s = read (filter isDigit s) :: Double
