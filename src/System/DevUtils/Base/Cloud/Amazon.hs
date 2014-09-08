@@ -281,4 +281,4 @@ s3ToGP s3 =
  ) $ S3.regions $ S3.config s3
 
 
-readCurrency s = read (filter isDigit s) :: Double
+readCurrency s = read (filter (\c -> isDigit c || c == '.') s) :: Double
