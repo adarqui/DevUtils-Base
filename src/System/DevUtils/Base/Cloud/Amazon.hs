@@ -49,6 +49,10 @@ data JSONLocations = JSONLocations {
  ec2DedicatedPath'Light :: FilePath,
  ec2DedicatedPath'Medium :: FilePath,
  ec2DedicatedPath'Heavy :: FilePath,
+ ec2Path'onDemand'Legacy :: FilePath,
+ ec2ReservedPath'Light'Legacy :: FilePath,
+ ec2ReservedPath'Medium'Legacy :: FilePath,
+ ec2ReservedPath'Heavy'Legacy :: FilePath,
  ecPath'onDemand :: FilePath,
  ecReservedPath'Light :: FilePath,
  ecReservedPath'Medium :: FilePath,
@@ -70,6 +74,10 @@ data Pricing = Pricing {
  ec2'di'light :: EC2Reserved.EC2Root,
  ec2'di'medium :: EC2Reserved.EC2Root,
  ec2'di'heavy :: EC2Reserved.EC2Root,
+ ec2'onDemand'legacy :: EC2.EC2Root,
+ ec2'ri'light'legacy :: EC2Reserved.EC2Root,
+ ec2'ri'medium'legacy :: EC2Reserved.EC2Root,
+ ec2'ri'heavy'legacy :: EC2Reserved.EC2Root,
  ec'onDemand :: EC.ECRoot,
  ec'ri'light :: ECReserved.ECRoot,
  ec'ri'medium :: ECReserved.ECRoot,
@@ -91,6 +99,10 @@ defaultJSONLocations = JSONLocations {
  ec2DedicatedPath'Light = p "EC2-Linux-DI-RI-Light",
  ec2DedicatedPath'Medium = p "EC2-Linux-DI-RI-Medium",
  ec2DedicatedPath'Heavy = p "EC2-Linux-DI-RI-Heavy",
+ ec2Path'onDemand'Legacy = p "EC2-Linux-OnDemand-Legacy",
+ ec2ReservedPath'Light'Legacy = p "EC2-Linux-RI-Light-Legacy",
+ ec2ReservedPath'Medium'Legacy = p "EC2-Linux-RI-Medium-Legacy",
+ ec2ReservedPath'Heavy'Legacy = p "EC2-Linux-RI-Heavy-Legacy",
  ecPath'onDemand = p "ElastiCache-Cleaned-Standard",
  ecReservedPath'Light = p "ElastiCache-Cleaned-RI-Light-Standard",
  ecReservedPath'Medium = p "ElastiCache-Cleaned-RI-Medium-Standard",
@@ -113,6 +125,10 @@ populate JSONLocations{..} = do
  _ec2'di'light <- B.readFile ec2DedicatedPath'Light
  _ec2'di'medium <- B.readFile ec2DedicatedPath'Medium
  _ec2'di'heavy <- B.readFile ec2DedicatedPath'Heavy
+ _ec2'onDemand'legacy <- B.readFile ec2Path'onDemand'Legacy
+ _ec2'ri'light'legacy <- B.readFile ec2ReservedPath'Light'Legacy
+ _ec2'ri'medium'legacy <- B.readFile ec2ReservedPath'Medium'Legacy
+ _ec2'ri'heavy'legacy <- B.readFile ec2ReservedPath'Heavy'Legacy
  _ec'onDemand <- B.readFile ecPath'onDemand
  _ec'ri'light <- B.readFile ecReservedPath'Light
  _ec'ri'medium <- B.readFile ecReservedPath'Medium
@@ -132,6 +148,10 @@ populate JSONLocations{..} = do
   ec2'di'light = fromJust (decode' _ec2'di'light :: Maybe EC2Reserved.EC2Root),
   ec2'di'medium = fromJust (decode' _ec2'di'medium :: Maybe EC2Reserved.EC2Root),
   ec2'di'heavy = fromJust (decode' _ec2'di'heavy :: Maybe EC2Reserved.EC2Root),
+  ec2'onDemand'legacy = fromJust (decode' _ec2'onDemand'legacy :: Maybe EC2.EC2Root),
+  ec2'ri'light'legacy = fromJust (decode' _ec2'ri'light'legacy :: Maybe EC2Reserved.EC2Root),
+  ec2'ri'medium'legacy = fromJust (decode' _ec2'ri'medium'legacy :: Maybe EC2Reserved.EC2Root),
+  ec2'ri'heavy'legacy = fromJust (decode' _ec2'ri'heavy'legacy :: Maybe EC2Reserved.EC2Root),
   ec'onDemand = fromJust (decode' _ec'onDemand :: Maybe EC.ECRoot),
   ec'ri'light = fromJust (decode' _ec'ri'light :: Maybe ECReserved.ECRoot),
   ec'ri'medium = fromJust (decode' _ec'ri'medium :: Maybe ECReserved.ECRoot),
@@ -147,6 +167,10 @@ generalize :: Pricing -> [GeneralPricing]
 generalize Pricing{..} =
  concat
   [
+   ec2ToGP ec2'onDemand'legacy,
+   ec2ToGP'ri'or'di ec2'ri'light'legacy "ri-light-",
+   ec2ToGP'ri'or'di ec2'ri'medium'legacy "ri-medium-",
+   ec2ToGP'ri'or'di ec2'ri'heavy'legacy "ri-heavy-",
    ec2ToGP ec2'onDemand,
    ec2ToGP'ri'or'di ec2'ri'light "ri-light-",
    ec2ToGP'ri'or'di ec2'ri'medium "ri-medium-",
