@@ -32,6 +32,7 @@ import qualified System.DevUtils.Base.Cloud.Amazon.S3 as S3
 import qualified System.DevUtils.Base.Cloud.Amazon.Misc
 
 import System.DevUtils.Base.Cloud.Amazon.Misc
+import System.DevUtils.Base.Finance.Misc
 
 import qualified Data.ByteString.Lazy as B
 import Data.Aeson
@@ -58,16 +59,6 @@ data JSONLocations = JSONLocations {
  rdsReservedPath'Heavy :: FilePath,
  s3Path :: FilePath
 } deriving (Show, Read)
-
--- everything per hr
-data GeneralPricing = GeneralPricing {
- fam :: String,
- region :: String,
- name :: String,
- rate'type :: String,
- upfront :: Double,
- rate :: Double 
-} deriving (Show, Read, Eq, Ord)
 
 data Pricing = Pricing {
  ebs :: EBS.EBSRoot,

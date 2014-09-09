@@ -40,6 +40,7 @@ library
    System.DevUtils.Base.Cloud.Amazon.Misc
 
    System.DevUtils.Base.Currency
+   System.DevUtils.Base.Finance.Misc
 
   build-depends:       base >= 4.6, HUnit >= 1.2.5.0, containers >= 0.5.5.1, bytestring, aeson
   GHC-Options:         -Wall -rtsopts
