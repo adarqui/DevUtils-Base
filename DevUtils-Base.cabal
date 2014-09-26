@@ -13,6 +13,7 @@ cabal-version:       >=1.8
 library
   exposed-modules:
 
+   System.DevUtils.Base.Url
    System.DevUtils.Base.Url.Auth
    System.DevUtils.Base.Url.Connection
    System.DevUtils.Base.Url.Field
