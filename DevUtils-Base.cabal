@@ -26,6 +26,8 @@ library
    System.DevUtils.Base.Url.Session
    System.DevUtils.Base.Url.Ssh
    System.DevUtils.Base.Url.ZMQ
+   System.DevUtils.Base.Url.UberLog
+   System.DevUtils.Base.Url.WWW
 
    System.DevUtils.Base.Misc
    System.DevUtils.Base.Control.Monad
