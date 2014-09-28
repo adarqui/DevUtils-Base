@@ -13,6 +13,8 @@ cabal-version:       >=1.8
 library
   exposed-modules:
 
+   System.DevUtils.Base
+
    System.DevUtils.Base.Url
    System.DevUtils.Base.Url.Auth
    System.DevUtils.Base.Url.Connection
@@ -29,6 +31,8 @@ library
    System.DevUtils.Base.Data.List
    System.DevUtils.Base.Data.Map
 
+   System.DevUtils.Base.Network
+
    System.DevUtils.Base.Cloud.Amazon
    System.DevUtils.Base.Cloud.Amazon.EC2
    System.DevUtils.Base.Cloud.Amazon.EC2.Reserved
@@ -43,6 +47,6 @@ library
    System.DevUtils.Base.Currency
    System.DevUtils.Base.Finance.Misc
 
-  build-depends:       base >= 4.6, HUnit >= 1.2.5.0, containers >= 0.5.5.1, bytestring, aeson
+  build-depends:       base >= 4.6, HUnit >= 1.2.5.0, containers >= 0.5.5.1, bytestring, aeson, network
   GHC-Options:         -Wall -rtsopts
   hs-source-dirs:      src
