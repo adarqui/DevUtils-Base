@@ -13,6 +13,7 @@ data Redis = Redis {
  _prefix :: Maybe String,
  _pool :: Integer,
  _idle :: Integer,
+ _key :: Maybe String,
  _custom :: Maybe String
 } deriving (Show, Read)
 
@@ -30,5 +31,6 @@ defaultRedis = Redis {
   _prefix = Nothing,
   _pool = 50,
   _idle = 30,
+  _key = Nothing,
   _custom = Nothing
  }
